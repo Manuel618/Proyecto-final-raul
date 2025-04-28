@@ -26,6 +26,12 @@ const io = new Server(server, {
   },
 });
 
+app.use(cors({
+  origin: 'https://proyecto-final-raul-m19e.vercel.app', // 🔵 tu frontend en Vercel
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
 app.use(cors());
 app.use(express.json());
 
